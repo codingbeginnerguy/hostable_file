@@ -47,11 +47,12 @@
 
   <!-- custom css file link  -->
   <link rel="stylesheet" href="uploadable.css">
-  <link rel="stylesheet" href="main.js" />
+  <!-- <link rel="stylesheet" href="main.js"/> -->
   <link rel="stylesheet" href="lightslider.css">
   <script type="text/javascript" src="style.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="lightslider.js"></script>
+  <script type="text/javascript" src="main.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="script.js">
   
@@ -79,7 +80,7 @@
                 <a href="#about" >About us</a>
                 <a href="#products">Products</a>
                 <a href="#why">Why Us</a>
-                <a href="#steps">FAQ's</a>
+                <a href="#about1">FAQ's</a>
             </nav>
             <div class="cta">
                 <a href="index_seller.html#steps" class="btn">Become a Seller</a>
@@ -90,9 +91,6 @@
 
         <!-- _________________________ LANDING PAGE SECTION __________________________________________________________ -->
         <section class="home" id="home">
-            <div class="wave">
-
-            </div>
             <div class="content">
               <h3>Have Market Your Way, <br> <span class="heading1">MUSSUT</span></h3> <br>
               <p>Do you still shop for everything? <br>
@@ -100,7 +98,10 @@
               </p>
             </div>
             <div class="image" id="user_main">
-            <img src="1.png" alt="">
+              <!-- <img src="1.png" alt=""> -->
+              <video loop autoplay >
+                <source src="Mussut user (6).mp4" type="video/mp4">
+            </video>
             </div>
         </section>
   
@@ -114,7 +115,9 @@
             <h1 class="heading h1"> about mussut </h1>
             <div class="column">
               <div class="image">
-                <img src="Office.svg" alt="">
+                <!-- <img src="My Choice.png" alt=""> -->
+                <img src="Company-amico.svg" alt="">
+                <!-- <img src="Office.svg" alt=""> -->
               </div>
               <div class="content">
                 <h3><b> We bring your needs closer to you!</b></h3>
@@ -471,7 +474,8 @@
     <!--___________________________ CONTACT US SECION__________________________________________________________-->
     <section class="contact" id="contact">
       <div class="image">
-        <img src="Questions-amico.svg" alt="">
+        <img src="Contact us-pana.svg" alt="">
+        <!-- <img src="Questions-amico.svg" alt=""> -->
       </div>
 
       <form id="contactForm" action="">
@@ -517,6 +521,63 @@
             </div>
           </div>
         </section>
+
+
+
+
+
+
+        <!--______________________________ FAQ Section______________________________ -->
+        <section class="about1" id="about1">
+          <h1 class="heading h1"> FAQ's </h1>
+          <div class="column1">
+            <div class="image">
+              <img src="Thoughts-pana.svg" alt="">
+            </div>
+            <div class="content1">
+              <div class="questions-container">
+                  <div class="question">
+                      <div class="button_arrow">
+                          <span>What's the usual Delivery Time?</span>
+                          <i class="fas fa-chevron-down d-arrow"></i>
+                      </div>
+                      <p style="text-transform: none;">We are really excited to tell you that you will get your ordered products within 2-4 hours at max!
+                      </p>
+                  </div>
+          
+                  <div class="question">
+                      <div class="button_arrow">
+                          <span>What is the return/exchange duration for a product?</span>
+                          <i class="fas fa-chevron-down d-arrow"></i>
+                      </div>
+                      <p style="text-transform: none;">We are getting your city's trusted shops to your doorstep and hence return/exchange duration is subject to shop from where you are getting your order delivered! You will be well informed about return, exchange and warranty before hand.</p>
+                  </div>
+          
+                  <div class="question">
+                      <div class="button_arrow">
+                          <span>Can I get a job after learning JavaScript?</span>
+                          <i class="fas fa-chevron-down d-arrow"></i>
+                      </div>
+                      <p style="text-transform: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam ea odit voluptate culpa quas explicabo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quas ut vitae corrupti, quasi quos distinctio placeat, possimus velit est non aperiam amet facilis reiciendis!</p>
+                  </div>
+          
+                  <div class="question">
+                      <div class="button_arrow">
+                          <span>How long will it take to learn JavaScript?</span>
+                          <i class="fas fa-chevron-down d-arrow"></i>
+                      </div>
+                      <p style="text-transform: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus corporis pariatur a maiores minus tempore magni nam beatae dolores omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi incidunt eaque laboriosam, facilis exercitationem dignissimos a et! Odit nostrum beatae quaerat officiis, nam maxime incidunt.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section> 
+      
+        
+
+
+
+
 
 
 
@@ -608,6 +669,38 @@
       </script>
   
   
+      <!-- <script>
+        const button_arrows = document.getElementsByClassName('button_arrow');
+          // const button_arrows = document.querySelectorAll('button_arrow');
+
+        button_arrows.forEach( button_arrow =>{
+            button_arrow.addEventListener('click',()=>{
+            const faq = button_arrow.nextElementSibling;
+            const icon = button_arrow.children[1];
+
+            faq.classList.toggle('show');
+            icon.classList.toggle('rotate');
+                })
+            } )
+      </script> -->
+<script>
+  const divs = document.querySelectorAll('div');
+
+divs.forEach( div =>{
+    div.addEventListener('click',()=>{
+        const faq = div.nextElementSibling;
+        const icon = div.children[1];
+
+        faq.classList.toggle('show');
+        icon.classList.toggle('rotate');
+    })
+} )
+</script>
+
+
+
+
+
   <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
   <script src="config.js"></script>
@@ -615,5 +708,6 @@
   <script src="subscription.js"></script>
   <script src="contactForm.js"></script>
   <script src="scripts.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
